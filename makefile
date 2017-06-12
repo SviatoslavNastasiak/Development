@@ -32,6 +32,7 @@ uninstall:
 	rm -rf /usr/local/bin/$(TARGET)
 
 install-strip: 
+#to tell you the truth I don't know what is it found smth like this by googling
 	$(MAKE) Inst_prog='$(Inst_prog) -s' install
 
 ASM: main.s m1.s m2.s
