@@ -1,0 +1,8 @@
+#!/bin/bash
+INCLUDE="-I include/"
+INCLUDE_M1="-I src/m1/include/"
+INCLUDE_M2="-I src/m2/include/"
+gcc -c src/m1/m1.c $INCLUDE_M1 -o output/m1.o
+gcc -c src/m2/m2.c $INCLUDE_M2 -o output/m2.o
+gcc -c main.c $INCLUDE $INCLUDE_M1 $INCLUDE_M2 -o output/main.o
+gcc output/m1.o output/m2.o output/main.o -o output/test
